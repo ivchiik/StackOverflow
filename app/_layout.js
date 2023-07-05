@@ -2,10 +2,12 @@ import { Link, Stack } from "expo-router";
 import client from "../src/graphql/client";
 import { Provider } from "urql";
 import { AntDesign } from "@expo/vector-icons";
+import { StatusBar } from "react-native";
 
 const RootLayout = () => {
   return (
     <Provider value={client}>
+      <StatusBar barStyle="dark-content"/>
       <Stack>
         <Stack.Screen
           name="index"
